@@ -1,0 +1,22 @@
+body {
+    background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("img/bg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.bannerRow {
+    height: 600px;
+    overflow: hidden;
+}
+
+.heroBannerH1, .card-title {
+    color: orange;
+}
+
+.card-body {
+    max-height: 280px;
+}
+
+.summary {
+    color: orange;
+}

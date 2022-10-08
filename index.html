@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>eBook</title>
+</head>
+<body>
+    <header class="py-2 text-dark bg-dark">
+        <div class="container-fluid">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  About
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Developer</a></li>
+                  <li><a class="dropdown-item" href="#">Author</a></li>
+                  <li><a class="dropdown-item" href="#">Instructors</a></li>
+                </ul>
+              </div>
+            </ul>
+    
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+              <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
+            </form>
+    
+            <div class="text-end">
+              <button type="button" class="btn btn-outline-light me-2">Login</button>
+              <button type="button" class="btn btn-warning">Sign-up</button>
+            </div>
+          </div>
+        </div>
+    </header>
+
+    <div class="container my-5">
+        <div class="row p-4 pb-0 pe-lg-0 align-items-center rounded-3 border shadow-lg bannerRow text-white">
+            <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+                <h1 class="display-4 fw-bold lh-1 heroBannerH1">World of Warcraft Book Sale</h1>
+                <p class="lead">The World of Warcraft book series by multiple authors includes books Cycle of Hatred, Rise of the Horde, Tides of Darkness, and several more. See the complete World of Warcraft series book list in order, box sets or omnibus editions, and companion titles.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+                    <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
+                </div>
+            </div>
+            <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+                <img class="rounded-lg-3" src="img/thrall.png" alt="" width="720">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-sm products-container" id="shopList-container">
+        <div class="row gy-0 d-flex justify-content-between cartList">
+
+            <div class="card text-bg-dark addToCart" style="width: 22rem;">
+                <img src="img/dawnofAspects.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">World of Warcraft: Dawn of the Aspects</h5>
+                    <p class="card-text">Uncertainty plagues Azeroth's ancient guardians as they struggle to find a new purpose. </p>
+                        <div class="row d-flex justify-content-start align-self-start">
+                            <p class="col">&#8369;<span class="price">796</span></p>
+                            <p class="col text-secondary">&#8369;<s>1296</s></p>
+                        </div>
+                    <a href="" class="btn btn-primary addToCartBtn" data-product-id="1">Add to Cart</a>
+                </div>
+                </div>
+
+            <div class="card text-bg-dark addToCart" style="width: 22rem;">
+                <img src="img/sundering.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">WarCraft: War of The Ancients # 3: The Sundering</h5>
+                    <p class="card-text">An original trilogy of magic, warfare, and heroism based on the bestselling, award-winning electronic game series from Blizzard Entertainment..</p>
+                    <div class="row">
+                        <p class="col">&#8369;<span class="price">596</span></p>
+                        <p class="col text-secondary">&#8369;<s>1096</s></p>
+                    </div>
+                    <a href="" class="btn btn-primary addToCartBtn"  data-product-id="2">Add to Cart</a>
+                </div>
+                </div>
+
+            <div class="card text-bg-dark addToCart" style="width: 22rem;">
+                <img src="img/sylvanah.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Sylvanas (World of Warcraft)</h5>
+                    <p class="card-text">NATIONAL BESTSELLER The epic, definitive story of Sylvanas Windrunner, one of World of Warcraft's most enduring and iconic characters.</p>
+                    <div class="row">
+                        <p class="col">&#8369;<span class="price">976</span></p>
+                        <p class="col text-secondary">&#8369;<s>1196</s></p>
+                    </div>
+                    <a href="" class="btn btn-primary addToCartBtn" data-product-id="3">Add to Cart</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--- Book full description with shopping cart button --->
+
+    <div class="container-sm mt-5 pt-5 cart" id="dawnofAspects">
+        <h2 class="text-white">Shoppipng Cart Section</h2>
+        <table class="table text-white bg-secondary">
+            <thead class="table-dark">
+                <tr>
+                    <th>Book Title</th>
+                    <th>Image</th>
+                    <th>Price</th>
+                    <th>Count</th>
+                    <th>Total</th>
+                    <th>Remove Item</th>
+                </tr>
+            </thead>
+            <tbody class="productUnder">
+                <!-- <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr> -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container-sm" style="width: 200px; margin-right: 150px;">
+        <table class="table fortotalPayable  text-orange">
+
+        </table>
+    </div>
+
+    <div class="container-fluid">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+              <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+            </a>
+            <span class="mb-3 mb-md-0 text-muted">&copy; 2022 Warcraft Books Sale</span>
+          </div>
+        </footer>
+    </div>
+    
+    <!-- Bootstrap JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
