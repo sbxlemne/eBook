@@ -45,7 +45,7 @@ const totalPriceAmount = () => {
     let result = ` 
             <tr>
                 <th class="summary">
-                    Total Amount
+                    Total Amount:
                 </th>
                 <td class="text-white">
                 &#8369;${numberWithCommas(amount)}
@@ -53,10 +53,15 @@ const totalPriceAmount = () => {
             </tr>
             <tr>
                 <th class="summary">
-                    Total Items
+                    Total Items:
                  </th>
                 <td class="text-white">
                     ${totalItems}
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                <button class="btn btn-primary checkout">Checkout...</button>
                 </td>
             </tr>`
     console.log(result);
