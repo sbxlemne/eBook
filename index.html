@@ -10,7 +10,7 @@
     <title>eBook</title>
 </head>
 <body>
-    <header class="py-2 text-dark bg-dark">
+    <header class="container-fluid py-2 text-dark bg-dark">
         <div class="container-fluid">
           <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
@@ -29,11 +29,13 @@
                 </ul>
               </div>
             </ul>
-    
+            <div class="cart-container">
+                <a href="#cartTable"><img src="img/cartWhite.png" alt="" class="cart" style="width: 40px;"><span class="cartCount"></span></a>
+            </div>
             <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
               <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
             </form>
-    
+            
             <div class="text-end">
               <button type="button" class="btn btn-outline-light me-2">Login</button>
               <button type="button" class="btn btn-warning">Sign-up</button>
@@ -58,44 +60,51 @@
     </div>
 
     <div class="container-sm products-container" id="shopList-container">
-        <div class="row gy-0 d-flex justify-content-between cartList">
+        <div class="row-cols-4 gy-0 d-flex justify-content-between cartList flex-row">
 
-            <div class="card text-bg-dark addToCart" style="width: 22rem;">
-                <img src="img/dawnofAspects.jpg" class="card-img-top" alt="...">
+            <div class="card text-bg-dark imageCard" style="width: 21rem;">
+                <a href="#aspects"><img src="img/dawnofAspects.jpg" class="card-img-top" alt="..."></a>
                 <div class="card-body">
                     <h5 class="card-title">World of Warcraft: Dawn of the Aspects</h5>
                     <p class="card-text">Uncertainty plagues Azeroth's ancient guardians as they struggle to find a new purpose. </p>
                         <div class="row d-flex justify-content-start align-self-start">
-                            <p class="col">&#8369;<span class="price">796</span></p>
-                            <p class="col text-secondary">&#8369;<s>1296</s></p>
-                        </div>
-                    <a href="" class="btn btn-primary addToCartBtn" data-product-id="1">Add to Cart</a>
-                </div>
-                </div>
 
-            <div class="card text-bg-dark addToCart" style="width: 22rem;">
-                <img src="img/sundering.jpg" class="card-img-top" alt="...">
+                            <p><s>&#8369;</s><span class="text-secondary"><s>1296</s></span> &#8369;<span class="price">796</span></p>
+                            
+                        </div>
+                    <a href="#aspects" class="btn btn-primary DetailbtnOverlay" data-product-id="1">Click for More Details</a>
+                </div>
+            </div>
+            
+
+
+
+            <div class="card text-bg-dark imageCard" style="width: 21rem;">
+                <a href="#sundering"><img src="img/sundering.jpg" class="card-img-top" alt="..."></a>
                 <div class="card-body">
                     <h5 class="card-title">WarCraft: War of The Ancients # 3: The Sundering</h5>
                     <p class="card-text">An original trilogy of magic, warfare, and heroism based on the bestselling, award-winning electronic game series from Blizzard Entertainment..</p>
                     <div class="row">
-                        <p class="col">&#8369;<span class="price">596</span></p>
-                        <p class="col text-secondary">&#8369;<s>1096</s></p>
-                    </div>
-                    <a href="" class="btn btn-primary addToCartBtn"  data-product-id="2">Add to Cart</a>
-                </div>
-                </div>
+                        
+                        <p><s>&#8369;</s><span class="text-secondary"><s>1096</s></span> &#8369;<span class="price">596</span></p>
 
-            <div class="card text-bg-dark addToCart" style="width: 22rem;">
-                <img src="img/sylvanah.jpg" class="card-img-top" alt="...">
+                    </div>
+                    <a href="#sundering" class="btn btn-primary DetailbtnOverlay"  data-product-id="2">Click for More Details</a>
+                </div>
+            </div>
+
+
+            <div class="card text-bg-dark imageCard" style="width: 21rem;">
+                <a href="#sylvanas"><img src="img/sylvanah.jpg" class="card-img-top" alt="..."></a>
                 <div class="card-body">
                     <h5 class="card-title">Sylvanas (World of Warcraft)</h5>
                     <p class="card-text">NATIONAL BESTSELLER The epic, definitive story of Sylvanas Windrunner, one of World of Warcraft's most enduring and iconic characters.</p>
                     <div class="row">
-                        <p class="col">&#8369;<span class="price">976</span></p>
-                        <p class="col text-secondary">&#8369;<s>1196</s></p>
+                        
+                        <p><s>&#8369;</s><span class="text-secondary"><s>1590</s></span> &#8369;<span class="price">1076</span></p>
+
                     </div>
-                    <a href="" class="btn btn-primary addToCartBtn" data-product-id="3">Add to Cart</a>
+                    <a href="#sylvanas" class="btn btn-primary DetailbtnOverlay" data-product-id="3">Click for More Details</a>
                 </div>
             </div>
 
@@ -104,7 +113,7 @@
 
     <!--- Book full description with shopping cart button --->
 
-    <div class="container-sm mt-5 pt-5 cart" id="dawnofAspects">
+    <div class="container-sm mt-5 pt-5 cart" id="cartTable">
         <h2 class="text-white">Shoppipng Cart Section</h2>
         <table class="table text-white bg-secondary">
             <thead class="table-dark">
@@ -133,6 +142,73 @@
         <table class="table fortotalPayable  text-orange">
 
         </table>
+    </div>
+    
+    <div class="container">
+
+        <div class="row featurette" id="aspects">
+            <div class="col-md-7 order-md-2 d-flex flex-column justify-content-center align-items-center bg-dark text-white rounded">
+                <h2 class="featurette-heading fw-normal lh-1 fw-bold card-title">World of Warcraft: Dawn of the Aspects</h2>
+                <br>
+                <p>THE AGE OF DRAGONS IS OVER.
+                    <br><br>
+                    Uncertainty plagues Azeroth's ancient guardians as they struggle to find a new purpose. This dilemma has hit Kalecgos, youngest of the former Dragon Aspects, especially hard. Having lost his great powers, how can he―or any of his kind―still make a difference in the world? 
+                    <br><br>
+                    The answer lies in the distant past, when savage beasts called proto-dragons ruled the skies. Through a mysterious artifact found near the heart of Northrend, Kalecgos witnesses this violent era and the shocking history of the original Aspects: Alexstrasza, Ysera, Malygos, Neltharion, and Nozdormu. In their most primitive forms, the future protectors of Azeroth must stand united against Galakrond, a bloodthirsty creature that threatens the existence of their race. 
+                    <br><br>
+                    But did these mere proto-dragons face such a horrific adversary alone, or did an outside force help them? Were they given the strength they would become legendary for...or did they earn it with blood? Kalecgos's discoveries will change everything he knows about the events....</p>
+                    <p><s>&#8369;</s><span class="text-secondary"><s>1296</s></span> &#8369;<span class="price">796</span></p>
+                <a href="" class="btn btn-primary addToCartBtn" data-product-id="1">Add to Cart</a>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img src="img/dawnofAspects.jpg" class="img-fluid featurette-img mx-auto rounded shadow" alt="">
+            </div>
+        </div>
+
+        <hr class="featurette-divider" id="sundering">
+
+        <div class="row featurette">
+            <div class="col-md-7 d-flex flex-column justify-content-center align-items-center bg-dark text-white rounded">
+                <h2 class="featurette-heading fw-normal lh-1 card-title">WarCraft: War of The Ancients # 3: The Sundering</h2>
+                <br>
+                <p>
+                    The hour of wrath draws near...
+                    The valiant night elves have been shattered by the loss of their beloved general. The black dragon, Neltharion, has claimed the Demon Soul and scattered the mighty dragonflights to the winds. Above all, the demonlord, Archimonde, has led the Burning Legion to the very brink of victory over Kalimdor. As the land and its denizens reel from this unstoppable evil, a terror beyond all reckoning draws ever nearer from the Well of Eternity's depths...
+                    <span style="color: orange"><i>WARCRAFT THE SUNDERING</i></span><br><br>
+                    In the final, apocalyptic chapter of this epic trilogy, the dragon-mage Krasus and the young druid Malfurion must risk everything to save Azeroth from utter destruction. Banding together the dwarves, tauren and furbolg races, the heroes hope to spark an alliance to stand against the might of the Burning Legion. For if the Demon Soul should fall into the Legion's hands, all hope for the world will be lost. This then, is the hour...where past and future collide!
+                    
+                </p><br><br>
+                <p><s>&#8369;</s><span class="text-secondary"><s>1096</s></span> &#8369;<span class="price">596</span></p>
+                <br><br>
+                <a href="" class="btn btn-primary addToCartBtn" data-product-id="2">Add to Cart</a>
+            </div>
+            <div class="col-md-5">
+                <img src="img/sundering.jpg" class="img-fluid featurette-img mx-auto rounded shadow" alt="">
+            </div>
+        </div>
+
+        <hr class="featurette-divider" id="sylvanas">
+
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2 d-flex flex-column justify-content-center align-items-center bg-dark text-white rounded">
+                <h2 class="featurette-heading fw-normal lh-1 card-title">Sylvanas (World of Warcraft)</h2>
+                <br>
+                <p>Ranger-General. Banshee Queen. Warchief. Sylvanas Windrunner has borne many titles. To some, she is a hero—to others, a villain. But whether in pursuit of justice, vengeance, or something more, Sylvanas has always sought to control her own destiny.
+                    <br><br>
+                    The power to achieve her goals has never been closer, as Sylvanas works alongside the Jailer to liberate all Azeroth from the prison of fate. Her final task? Secure the fealty of their prisoner—King Anduin Wrynn.
+                    <br><br>
+                    To succeed, Sylvanas will be forced to reflect on the harrowing path that brought her to the Jailer's side and to reveal her truest self to her greatest rival. Here, Sylvanas's complete story is laid bare: the breaking of the Windrunner family and her rise to Ranger- General; her own death at the hands of Arthas and her renewed purpose in founding the Forsaken; the moment she first beheld the Maw and understood the true consequences of what lay beyond the veil of death.
+                    <br><br>
+                    But as her moment of victory draws near, Sylvanas Windrunner will make a choice that may ultimately come to define her. A choice that's hers to make.</p>
+                    <p><s>&#8369;</s><span class="text-secondary"><s>1590</s></span> &#8369;<span class="price">1076</span></p>
+                    <a href="" class="btn btn-primary addToCartBtn" data-product-id="3">Add to Cart</a>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img src="img/sylvanah.jpg" class="img-fluid featurette-img mx-auto rounded shadow" alt="">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
     </div>
 
     <div class="container-fluid">

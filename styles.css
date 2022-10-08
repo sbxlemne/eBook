@@ -9,7 +9,13 @@ body {
     overflow: hidden;
 }
 
-.heroBannerH1, .card-title {
+header {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+
+.heroBannerH1, .card-title, .featurette-heading, .summary {
     color: orange;
 }
 
@@ -17,6 +23,62 @@ body {
     max-height: 280px;
 }
 
-.summary {
+.price {
+    font-size: 1.5em;
     color: orange;
 }
+
+.imageCard {
+    position: relative;
+}
+
+.DetailbtnOverlay {
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-size: 50px;
+    /* color: orange !important; */
+    background-color: transparent !important;
+    animation-name: show_top;
+    animation-duration: 1s;
+}
+
+#moreDetailbtn {
+    font-size: 20px;
+}
+
+@keyframes show_top {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.imageCard:hover .DetailbtnOverlay{
+    display: flex;
+}
+
+.cart-container {
+    position: relative;
+    cursor: pointer;
+}
+
+.cartCount {
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    right: 40%;
+    top: 40%;
+    padding: 0;
+    color: #ff523b;
+}
+
+

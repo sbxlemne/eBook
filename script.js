@@ -1,5 +1,6 @@
-const addtoCart = document.querySelectorAll(".addToCart");
+const addtoCart = document.querySelectorAll(".featurette");
 const productUnder = document.querySelector(".productUnder");
+const cartSumItem = document.querySelector('.cartCount');
 let productsInCart = JSON.parse(localStorage.getItem('shoppingCart'));
 if(!productsInCart){
 	productsInCart = [];
@@ -7,6 +8,14 @@ if(!productsInCart){
 
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+const displayCountInCart = () => {
+    total = 0;
+    for (let i = 0; i < productsInCart.length; i++) {
+        total += productsInCart[i].count;
+    }
+    cartSumItem.textContent = total;
 }
 
 const displayShoppingList = () => {
@@ -64,7 +73,7 @@ const totalPriceAmount = () => {
                 <button class="btn btn-primary checkout">Checkout...</button>
                 </td>
             </tr>`
-    console.log(result);
+    // console.log(result);
     document.querySelector(".fortotalPayable").innerHTML = result;
 }
 
@@ -80,25 +89,27 @@ const addMinusitems = () => {
                 if (e.target.dataset.productId == element.id) {
                     if (isPlusButton) {
                         element.count += 1;
+                        alert("1 item added to cart");
                     } else if (isMinusButton) {
                         element.count -= 1;
                     } else if(removeSelectedCartItem) {
                         productsInCart.splice(i, 1);
                     }
-                    console.log(element.count);
-                    console.log(element.price);
-                    console.log(element.basePrice);
+                    // console.log(element.count);
+                    // console.log(element.price);
+                    // console.log(element.basePrice);
                     element.price = element.basePrice * element.count; 
-                    console.log(element.price);              
+                    // console.log(element.price);              
                 }
                 if (element.count <= 0) {
-                    console.log("help")
+                    // console.log("help")
                     productsInCart.splice(i, 1);
                 }                 
             }
         }
         displayShoppingList();
         totalPriceAmount();
+        displayCountInCart();
     })
 }
 
@@ -113,7 +124,7 @@ const updateCountInCart = (product) => {
 	}
     
     productsInCart.push(product);
-    console.log(productsInCart);
+    // console.log(productsInCart);
 }
 
 //dapat forEach since multiple array for .addToCart to be used
@@ -124,7 +135,6 @@ addtoCart.forEach(item => {
     if (e.target.classList.contains('addToCartBtn')) {
         const productID = e.target.dataset.productId;
         const productName = item.querySelector(".card-title").innerHTML;
-        const prodctDec = item.querySelector(".card-text").innerHTML;
         const productPrice = item.querySelector(".price").innerHTML;
         const productImage = item.querySelector('img').src;
 
@@ -132,7 +142,6 @@ addtoCart.forEach(item => {
             name: productName,
             image: productImage,
             id: productID,
-            desc: prodctDec,
             count: 1,
             price: +productPrice,
             basePrice: +productPrice,
@@ -141,12 +150,14 @@ addtoCart.forEach(item => {
             updateCountInCart (product); //update products, if exeist update count and update by push method
             displayShoppingList();
             totalPriceAmount();
-            
+            displayCountInCart();
+            alert("1 item added to cart");
         };
         
     });
 })
 
+displayCountInCart();
 addMinusitems();
 displayShoppingList();
 totalPriceAmount();
